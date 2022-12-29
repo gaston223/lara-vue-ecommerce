@@ -1,32 +1,6 @@
-<!--
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
 <template>
-    <!--
-      This example requires updating your template:
-
-      ```
-      <html class="h-full bg-gray-50">
-      <body class="h-full">
-      ```
-    -->
-    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div class="w-full max-w-md space-y-8">
-            <div>
-                <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Créer un nouveau mot de passe</h2>
-            </div>
-            <form class="mt-8 space-y-6" action="#" method="POST">
+    <GuestLayout title="Saisir un nouveau mot de passe">
+        <form class="mt-8 space-y-6" action="#" method="POST">
                 <input type="hidden" name="remember" value="true" />
 
                 <div class="-space-y-px rounded-md shadow-sm">
@@ -54,12 +28,12 @@
                     </button>
                 </div>
             </form>
-        </div>
-    </div>
+    </GuestLayout>
 </template>
 
 <script setup>
 import { LockClosedIcon } from '@heroicons/vue/20/solid'
+import GuestLayout from "../components/GuestLayout.vue";
 </script>
 
 <style scoped>
