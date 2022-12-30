@@ -30,10 +30,10 @@
 </template>-->
 <template>
     <div
-        class="sidebar p-2 w-[250px] overflow-y-auto text-center bg-gray-900"
+        class="sidebar p-2 w-[250px] transition-all overflow-y-auto text-center bg-gray-900"
     >
         <div class="text-gray-100 text-xl">
-            <div class="p-2.5 mt-1 flex items-center">
+            <div class="p-2 mt-1 flex items-center">
                 <ShoppingBagIcon class="w-4 rounded-md"></ShoppingBagIcon>
                 <h1 class="font-bold text-gray-200 text-[15px] ml-3">LaraVue Ecommerce</h1>
 
@@ -41,25 +41,28 @@
             <div class="my-2 bg-gray-600 h-[1px]"></div>
         </div>
         <router-link :to="{name : 'app.dashboard'}"
-            class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-violet-600 text-white"
+            class="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-violet-600 text-white"
         >
             <HomeIcon class="w-4"></HomeIcon>
             <span class="text-[15px] ml-4 text-gray-200">Tableau de bord</span>
         </router-link>
-        <router-link :to="{name : 'app.dashboard'}"
-                     class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-violet-600 text-white"
+
+        <router-link :to="{name : 'app.products'}"
+                     class="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-violet-600 text-white"
         >
             <ShoppingCartIcon class="w-4"></ShoppingCartIcon>
             <span class="text-[15px] ml-4 text-gray-200">Articles</span>
         </router-link>
+
         <router-link :to="{name : 'app.dashboard'}"
-                     class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-violet-600 text-white"
+                     class="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-violet-600 text-white"
         >
             <UserIcon class="w-4"></UserIcon>
             <span class="text-[15px] ml-4 text-gray-200">Utilisateurs</span>
         </router-link>
+
         <router-link :to="{name : 'app.dashboard'}"
-                     class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-violet-600 text-white"
+                     class="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-violet-600 text-white"
         >
             <ChartPieIcon class="w-4"></ChartPieIcon>
             <span class="text-[15px] ml-4 text-gray-200">Reporting</span>

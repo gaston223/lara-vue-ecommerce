@@ -1,11 +1,9 @@
 <template>
-    <header class="flex justify-between items-center h-16 shadow bg-white">
-        <button class="p-4 text-gray-700">
+    <header class="flex justify-between items-center p-3 h-16 shadow bg-white">
+        <button @click="emit('toggle-sidebar')" class="flex items-center justify-center rounded transition-colors w-8 h-8 text-gray-700 hover:bg-black/10">
             <Bars3Icon class="w-6"></Bars3Icon>
         </button>
-        <div class="px-4">
             <Menu as="div" class="relative inline-block text-left">
-                <div>
                     <MenuButton class="flex items-center">
                         <img src="https://randomuser.me/api/portraits/men/59.jpg" class="rounded-full w-8 mr-2" alt="">
                         <small> John Doe</small>
@@ -14,8 +12,6 @@
                             aria-hidden="true"
                         />
                     </MenuButton>
-                </div>
-
                 <transition
                     enter-active-class="transition duration-100 ease-out"
                     enter-from-class="transform scale-95 opacity-0"
@@ -61,15 +57,17 @@
                 </transition>
             </Menu>
 
-        </div>
     </header>
 </template>
 
 <script setup>
 import {Bars3Icon} from '@heroicons/vue/24/solid'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
-import { ChevronDownIcon, UserIcon, ArrowUturnDownIcon, ArrowDownCircleIcon, ArrowRightOnRectangleIcon, ArrowRightCircleIcon } from '@heroicons/vue/20/solid'
-//import { Logout } from '@heroicons/vue/24/outline'
+import { ChevronDownIcon, UserIcon, ArrowRightOnRectangleIcon } from '@heroicons/vue/20/solid'
+
+const emit = defineEmits(['toggle-sidebar'])
+
+
 </script>
 
 
